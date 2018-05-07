@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de Criptomendas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
+        <script src="js/criptomonedas.js"></script>
+
+        
+        
+    </head>
+    <body>
+        <div class="container"> <!-- Formulario --> 
+            <div class="card-deck">
+                <div class="card-column">
+                    <div class="card">
+                        <div class="card-body" align="center">
+                            <form action="index.html" onsubmit="return agregarlumno()">
+                                <div id="formularioT"> <h2>Calculadora de criptomonedas</h2> </div>                   
+                                <br>
+                                
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="CantidadCripto">Cantidad</label>
+                                        <input type="number" required="required" min="0" class="form-control" id="CantidadCripto">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="Criptomoneda">Criptomoneda</label>
+                                        <select id="Criptomoneda" class="form-control">
+                                            <option id="Bitcoin" selected value="Bitcoin">Bitcoin</option>
+                                            <option id="Etherum" value="Etherum">Etherum</option>
+                                            <option id="Litecoin" value="Litecoin">Litecoin</option>
+                                            <option id="Ripple" value="Ripple">Ripple</option>
+                                            <option id="Stellar Lumen" value="Stellar Lumen">Stellar Lumen</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="OpcionBusqueda">Cambiar a</label>
+                                        <select id="OpcionBusqueda" class="form-control">
+                                                <option id="Bitcoin" value="Bitcoin">Bitcoin</option>
+                                                <option id="Etherum" selected value="Etherum">Etherum</option>
+                                                <option id="Litecoin" value="Litecoin">Litecoin</option>
+                                                <option id="Ripple" value="Ripple">Ripple</option>
+                                                <option id="Stellar Lumen" value="Stellar Lumen">Stellar Lumen</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form-row" align="center">
+                            <div class="form-group col-md-6">
+                                <div><button type="submit" class="btn btn-primary btn-lg" id="Calcuar">Calcular!</button></div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div><button type="submit" class="btn btn-primary btn-lg" id="Añadir">Añadir a la cartera</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div  class="card">
+                        <div class="card-body">
+                            <div>
+                                <h1>Tu Cartera</h1>
+                            </div>
+                            <img class="card-img-bottom" src="img/2.png" alt="Card image cap">
+                            <div style="text-align:center">
+                                <table class="table table-striped" id="resultat">
+                                    <tr> 
+                                        <th> 
+                                            <p>Cantidad</p>
+                                        </th>
+                                        <th> 
+                                            <p>Criptomoneda</p>
+                                        </th>
+                                        <th> 
+                                            <p>€</p>
+                                        </th>
+                                    </tr>       
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div  class="card">  <!-- Tabla -->
+                    <div class="card-body">
+                        <div style="text-align:center;">
+                            <img class="card-img-bottom" src="img/1.jpg" alt="Card image cap">
+                        </div>
+                        <div style="text-align:center">
+                            <table class="table table-striped" id="resultat">
+                                <tr> 
+                                    <th> 
+                                        <p>#</p>
+                                    </th>
+                                    <th> 
+                                        <p>Criptomoneda</p>
+                                    </th>
+                                    <th> 
+                                        <p>Precio</p>
+                                    </th>
+                                    <th> 
+                                        <p>Evolución (%)</p>
+                                    </th>
+                                    <th> 
+                                        <p>Volumen (24h)</p>
+                                    </th>
+                                </tr>       
+                            </table>    
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>       
